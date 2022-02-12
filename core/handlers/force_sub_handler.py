@@ -25,12 +25,9 @@ async def handle_force_subscribe(bot, cmd):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+            text="**Please Contact @admin to use this Bot!**\n\nDue to Overload, Only homies can use the Bot!",
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
-                    ],
                     [
                         InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
                     ]
