@@ -51,8 +51,6 @@ async def HelpWatermark(bot, cmd):
 			return
 	await cmd.reply_text(
 		text=Config.USAGE_WATERMARK_ADDER,
-		parse_mode="Markdown",
-		reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/AbirHasan2005"), InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")], [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")], [InlineKeyboardButton("Source Code", url="https://github.com/AbirHasan2005/Watermark-Bot")]]),
 		disable_web_page_preview=True
 	)
 
@@ -235,7 +233,7 @@ async def VidWatermarkAdder(bot, cmd):
 		duration = metadata.get('duration').seconds
 	the_media_file_name = os.path.basename(the_media)
 	main_file_name = os.path.splitext(the_media_file_name)[0]
-	output_vid = main_file_name + "_[" + str(cmd.from_user.id) + "]_[" + str(time.time()) + "]_[@AbirHasan2005]" + ".mp4"
+	output_vid = main_file_name + ".mp4"
 	progress = Config.DOWN_PATH + "/WatermarkAdder/" + str(cmd.from_user.id) + "/progress.txt"
 	try:
 		output_vid = await vidmark(the_media, editable, progress, watermark_path, output_vid, duration, logs_msg, status, preset, watermark_position, watermark_size)
@@ -402,14 +400,11 @@ async def button(bot, cmd: CallbackQuery):
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="*You not my Homie☹️, Please contect @admin to use this Bot!**\n\nDue to Overload, Only homie's can use the Bot!",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
-							],
-							[
-								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+								InlineKeyboardButton("🔄 Refresh, if you're my homie 🔄", callback_data="refreshmeh")
 							]
 						]
 					),
@@ -450,14 +445,11 @@ async def button(bot, cmd: CallbackQuery):
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+					text="**You are not my Homie☹️, Please contect @admin to use this Bot!**\n\nDue to Overload, Only homie's can use the Bot!",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
-							],
-							[
-								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+								InlineKeyboardButton("🔄 Refresh, if you're my homie 🔄", callback_data="refreshmeh")
 							]
 						]
 					),
