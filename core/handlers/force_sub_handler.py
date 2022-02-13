@@ -17,30 +17,18 @@ async def handle_force_subscribe(bot, cmd):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
-                text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
-                parse_mode="markdown",
-                disable_web_page_preview=True
+                text="Sorry Sir, You are Banned to use me.",
             )
             return 400
     except UserNotParticipant:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Please Contact @admin to use this Bot!**\n\nDue to Overload, Only homies can use the Bot!",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
-                    ]
-                ]
-            ),
-            parse_mode="markdown"
+            text="**Unauthorized User Detected!**
         )
         return 400
     except Exception:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
-            parse_mode="markdown",
-            disable_web_page_preview=True
+            text="Something went Wrong.",
         )
         return 400
