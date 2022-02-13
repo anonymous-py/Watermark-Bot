@@ -400,11 +400,11 @@ async def button(bot, cmd: CallbackQuery):
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="*You not my Homie☹️, Please contect @admin to use this Bot!**\n\nDue to Overload, Only homie's can use the Bot!",
+					text="**Unauthorized User Detected!**",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🔄 Refresh, if you're my homie 🔄", callback_data="refreshmeh")
+								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
 							]
 						]
 					),
@@ -445,11 +445,11 @@ async def button(bot, cmd: CallbackQuery):
 					return
 			except UserNotParticipant:
 				await cmd.message.edit(
-					text="**You are not my Homie☹️, Please contect @admin to use this Bot!**\n\nDue to Overload, Only homie's can use the Bot!",
+					text="**Unauthorized User Detected!**",
 					reply_markup=InlineKeyboardMarkup(
 						[
 							[
-								InlineKeyboardButton("🔄 Refresh, if you're my homie 🔄", callback_data="refreshmeh")
+								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
 							]
 						]
 					),
