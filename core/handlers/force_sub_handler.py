@@ -23,7 +23,7 @@ async def handle_force_subscribe(bot, cmd):
     except UserNotParticipant:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Unauthorized User Detected!**
+            text="**Unauthorized User Detected!**"
         )
         return 400
     except Exception:
